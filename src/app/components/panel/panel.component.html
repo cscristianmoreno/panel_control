@@ -1,0 +1,10 @@
+<div *ngIf="userInfo$ | async as user" ngClass="class_panel_container">
+    <app-menu [userInfo]="user"></app-menu>
+
+    <section ngClass="class_section_container">
+        <app-header [userInfo]="user" [path]="section"></app-header>
+
+        <app-section-home *ngIf="item == 0" [userInfo]="user"></app-section-home>
+        <app-section-users *ngIf="item == 1"></app-section-users>
+    </section>
+</div>

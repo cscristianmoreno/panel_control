@@ -1,0 +1,19 @@
+<div ngClass="class_panel_menu">
+    <div ngClass="class_panel_menu_header_container">
+        <div ngClass="class_panel_menu_icon_container" [innerHTML]="icon"></div>
+        
+        <div matIconSuffix ngClass="class_panel_menu_header_title_container">
+            <span>{{user.name}} {{user.lastname}}</span>
+            <mat-icon fontIcon="keyboard_arrow_down"></mat-icon>
+        </div>
+
+        <span ngClass="class_panel_menu_header_subtitle">Usuario ID: #{{user.id}}</span>
+    </div>
+
+    <ul ngClass="class_panel_menu_items_container">
+        <a [routerLink]="item.path" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact: true}" *ngFor="let item of menu_items">
+            <mat-icon [fontIcon]="item.icon"></mat-icon>
+            <span>{{item.item}}</span>
+        </a>
+    </ul>
+</div>

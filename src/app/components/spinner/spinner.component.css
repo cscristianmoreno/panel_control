@@ -1,0 +1,21 @@
+.class_spinner_container {
+    display: flex;
+    padding: 1px;
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 100%;
+    border-color: white;
+    border-top-color: #3b3beb;
+
+    animation-name: class_spinner_container;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes class_spinner_container {
+    to {
+        transform: rotate(360deg);
+    }
+}

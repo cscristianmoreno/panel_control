@@ -1,0 +1,10 @@
+
+<ng-template [ngIf]="(loading$ | async) === false" [ngIfElse]="buttonSubmitted">
+    <button mat-raised-button color="primary" type="submit">{{title}}</button>
+</ng-template>
+
+<ng-template #buttonSubmitted>
+    <button mat-raised-button color="primary">
+        <app-spinner></app-spinner>
+    </button>
+</ng-template>

@@ -1,0 +1,26 @@
+<div ngClass="class_section_form">
+    <form ngClass="class_form_container" [formGroup]="form" (submit)="sendData()">
+        <span ngClass="class_form_title">Iniciar sesión</span>
+        
+        <br/>
+        <mat-form-field ngClass="class_field_container" appearance="outline" floatLabel="always">
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput type="text" formControlName="email">
+        </mat-form-field>
+        
+        <mat-form-field ngClass="class_field_container" appearance="outline" floatLabel="always">
+            <mat-label>Contraseña</mat-label>
+            <input matInput [type]="(showPassword) ? 'text' : 'password'" type="password" formControlName="password">
+            <button mat-icon-button matSuffix (click)="showPassword = !(showPassword)">
+                <mat-icon [fontIcon]="(showPassword) ? 'visibility_off' : 'visibility'"></mat-icon>
+            </button>
+        </mat-form-field>
+
+        
+        <app-submit title="Ingresar"></app-submit>
+
+        <br/>
+
+        <a routerLink="/register"><small>¿No tienes una cuenta?</small></a>
+    </form>
+</div>

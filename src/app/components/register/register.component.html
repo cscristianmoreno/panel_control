@@ -1,0 +1,44 @@
+<div ngClass="class_section_form">
+    <form ngClass="class_form_container" [formGroup]="form" (submit)="sendData()">
+        <span ngClass="class_form_title">Registrarse</span>
+
+        <mat-form-field ngClass="class_field_container" appearance="outline" floatLabel="always">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" name="name" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field ngClass="class_field_container" appearance="outline" floatLabel="always">
+            <mat-label>Apellido</mat-label>
+            <input matInput type="text" name="lastname" formControlName="lastname">
+        </mat-form-field>
+
+        <mat-form-field ngClass="class_field_container" appearance="outline" floatLabel="always">
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput type="text" name="email" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field ngClass="class_field_container" appearance="outline" floatLabel="always">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" name="password" formControlName="password">
+        </mat-form-field>
+
+        <mat-form-field ngClass="class_field_container" appearance="outline" floatLabel="always">
+            <mat-label>Repetir contraseña</mat-label>
+            <input matInput type="password" formControlName="repeatPassword">
+        </mat-form-field>
+
+        <mat-form-field ngClass="class_field_container" appearance="outline" floatLabel="always">
+            <mat-label>Edad</mat-label>
+            <input matInput type="number" name="age" formControlName="age">
+        </mat-form-field>
+
+        <app-submit title="Registrarme"></app-submit>
+
+        <br/>
+        
+        <a routerLink="/login">
+            <small>¿Ya tienes una cuenta?</small>
+        </a>
+    </form>
+
+</div>

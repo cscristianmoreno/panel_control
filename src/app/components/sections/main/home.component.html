@@ -1,0 +1,18 @@
+<div ngClass="class_section_middle_container">
+    <div [ngStyle]="{'background-color': item.color}" ngClass="class_section_items_container" *ngFor="let item of section_items">
+        <mat-icon [fontIcon]="item.icon"></mat-icon>
+        <span ngClass="class_section_items_title">{{item.title}}</span>
+    </div>
+</div>
+
+<div ngClass="class_section_footer_container">
+    <div>
+        <div ngClass="class_section_last_sesion_container">
+            <mat-icon fontIcon="person"></mat-icon>
+            <div ngClass="class_section_last_sesion">
+                <span>Última sesión</span>
+                <span>{{user.lastsession}}</span>
+            </div>
+        </div>
+    </div>
+</div>

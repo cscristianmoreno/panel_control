@@ -1,0 +1,9 @@
+.class_dialog_container {
+    overflow: auto;
+}
+
+.class_dialog_container form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
